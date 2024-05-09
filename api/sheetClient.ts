@@ -2,7 +2,7 @@ import { google } from "googleapis";
 
 // import key from "../secrets.json" assert { type: "json" };
 
-const client = new google.auth.JWT(process.env.client_email, '', process.env.private_key, [
+const client = new google.auth.JWT(process.env.client_email, '', process.env.private_key?.replace(/\\n/g, "\n"), [
   "https://www.googleapis.com/auth/spreadsheets",
 ]);
 
