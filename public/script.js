@@ -73,6 +73,7 @@ function isIDCustomer(str) {
 
 function reset() {
   document.querySelector("button").textContent = "Submit";
+  document.querySelector("button").disabled = true;
   document.getElementById("file-input").value = "";
   document.querySelector("#table-container-1 tbody").innerHTML = "";
   document.querySelector("#table-container-2 tbody").innerHTML = "";
