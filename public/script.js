@@ -135,9 +135,14 @@ async function sendData() {
       if (res.status >= 400 && res.status < 500) {
         document.querySelector("button").textContent = "Submit";
         alert("Ups! Silahkan coba lagi.");
+      } else {
+        document.querySelector("button").textContent = "Submit";
       }
+
+      
     })
     .catch((err) => {
       alert("Ups! Silahkan coba lagi.");
+      document.querySelector("button").textContent = "Submit";
     });
 }
