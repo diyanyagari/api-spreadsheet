@@ -28,7 +28,7 @@ app.post("/shift-data", async (req: any, res: any) => {
 
       await sheets.spreadsheets.values.append({
         spreadsheetId: process.env.SHEET_ID,
-        range: "A2:E",
+        range: "Form Responses 1!A2:E",
         insertDataOption: "INSERT_ROWS",
         valueInputOption: "RAW",
         requestBody: { values: rowData },
